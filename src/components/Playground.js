@@ -16,7 +16,7 @@ import Alert from 'react-bootstrap/Alert';
 function Playground(props) {
 
     // die Raster-Größe kann durch diese Variable angepasst werden
-    const gridSize = 3;
+    const gridSize = 5;
 
     // damit ich das Raster automatisiert mappen kann, habe ich Arrays mit Zahlen für die Reihen und die Spalten angelegt
     const [gridRows, setGridRows] = useState([...Array(gridSize).keys()]);
@@ -33,7 +33,7 @@ function Playground(props) {
     const [posY, setPosY] = useState(-1);
     const [facing, setFacing] = useState('Nowhere');
 
-    // hier lege ich fest, welche Richtung zu welchem Wert gehört, das brauche ich später für die Funkionen left und right
+    // hier lege ich fest, welche Richtung zu welchem Wert gehört, das brauche ich später für die Funktionen left und right
     const direction = Object.freeze({
         "NORTH": 1,
         "WEST": 2,
@@ -48,14 +48,14 @@ function Playground(props) {
     const [reportOn, setReportOn] = useState(false);
     const [reportString, setReportString] = useState("on");
 
-    // erst nach dem Patzieren des Robos können die anderen Funktionen verwendet werden
+    // erst nach dem Platzieren des Robos können die anderen Funktionen verwendet werden
     const [robotIsNotPlaced, setRobotIsNotPlaced] = useState(true);
     const [interactRobot, setinteractRobot] = useState(0);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         place(posXTMP, posYTMP, facingTMP);
-        // anstatt der place-Funktion könnte man auch einfach die Funktionalität dieser hier ausführen implementieren
+        // anstatt der place-Funktion könnte man auch einfach die Funktionalität dieser hier implementieren
         // if (Number.isInteger(setPosXTMP) && Number.isInteger(setPosYTMP) && setPosXTMP < 5 && setPosXTMP > -1 && setPosYTMP < 5 && setPosYTMP > -1) {....
     }
 
@@ -64,6 +64,7 @@ function Playground(props) {
         setPosError(false);
         setPlaceError(false);
         setFacingError(false);
+
         let checkNumbers = false;
         let checkFacing = false;
 
@@ -153,7 +154,7 @@ function Playground(props) {
     const left = () => {
         // falls zuvor eine Fehler-Meldung bzgl der Position gezeigt wurde, wird diese vor der neuen Platzierung ausgeschaltet
         setPosError(false);
-        // hier wird nun das direction-Objekt verwendet, um die Drehung um zusetzen
+        // hier wird nun das direction-Objekt verwendet, um die Drehung umzusetzen
         // hierzu habe ich die Richtungen gegen den Uhrzeigersinn nummeriert (aus Gewöhnung an die Koordinaten-Systeme in der Mathematik, welche die Quadranten gegen den Uhrzeigersinn zählen), 
         // Norden = 1
         // Westen = 2 
@@ -258,12 +259,12 @@ function Playground(props) {
                                 <Form.Group className="formInputDir" as={Row}>
                                     <Form.Group className="formInputDirCol" sm="6">
                                         {/* durch die Radio-Buttons kann hier eine falsche Eingabe vermieden werden; Abspeicherung und tmp-Hook */}
-                                        <Form.Check label="NORTH" name="groupDir" value={"NORTH"} type={'radio'} id="radioN" onChange={(e) => setFacingTMP(e.target.value)} />
-                                        <Form.Check label="SOUTH" name="groupDir" value={"SOUTH"} type={'radio'} id="radioS" onChange={(e) => setFacingTMP(e.target.value)} />
+                                        <Form.Check label="NORTH" required name="groupDir" value={"NORTH"} type={'radio'} id="radioN" onChange={(e) => setFacingTMP(e.target.value)} />
+                                        <Form.Check label="SOUTH" required name="groupDir" value={"SOUTH"} type={'radio'} id="radioS" onChange={(e) => setFacingTMP(e.target.value)} />
                                     </Form.Group>
                                     <Form.Group className="formInputDirCol" sm="6">
-                                        <Form.Check label="WEST" name="groupDir" value={"WEST"} type={'radio'} id="radioW" onChange={(e) => setFacingTMP(e.target.value)} />
-                                        <Form.Check label="EAST" name="groupDir" value={"EAST"} type={'radio'} id="radioE" onChange={(e) => setFacingTMP(e.target.value)} />
+                                        <Form.Check label="WEST" required name="groupDir" value={"WEST"} type={'radio'} id="radioW" onChange={(e) => setFacingTMP(e.target.value)} />
+                                        <Form.Check label="EAST" required name="groupDir" value={"EAST"} type={'radio'} id="radioE" onChange={(e) => setFacingTMP(e.target.value)} />
                                     </Form.Group>
                                 </Form.Group>
                                 <Form.Group as={Row}>
