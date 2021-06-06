@@ -62,6 +62,8 @@ function Playground(props) {
     const place = (x, y, f) => {
         // falls zuvor eine Fehler-Meldung bzgl der Position gezeigt wurde, wird diese vor der neuen Platzierung ausgeschaltet
         setPosError(false);
+        setPlaceError(false);
+        setFacingError(false);
         let checkNumbers = false;
         let checkFacing = false;
 
@@ -85,7 +87,6 @@ function Playground(props) {
                 setPlaceError(true);
             }
             if (checkFacing === false) {
-
                 setFacingError(true);
             }
         }
@@ -144,7 +145,7 @@ function Playground(props) {
                 }
                 break;
             default:
-                console.error("Fehler in switchcase")
+                console.error("Fehler in switchcase");
                 break;
         }
     }
