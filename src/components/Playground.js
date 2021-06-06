@@ -16,13 +16,13 @@ import Alert from 'react-bootstrap/Alert';
 function Playground(props) {
 
     // die Raster-Größe kann durch diese Variable angepasst werden
-    const gridSize = 5;
+    const gridSize = 3;
 
-    // damit ich das Raster automatisiert mappen kann, habe ich leere Arrays für die Reihen und die Spalten angelegt
+    // damit ich das Raster automatisiert mappen kann, habe ich Arrays mit Zahlen für die Reihen und die Spalten angelegt
     const [gridRows, setGridRows] = useState([...Array(gridSize).keys()]);
     const [gridCols, setGridCols] = useState([...Array(gridSize).keys()]);
 
-    // diese tmp-hooks verwende ich zur Zwischenspeicherung, damit ich die vorgegeben place-Funktion mit den 
+    // diese tmp-hooks verwende ich zur Zwischenspeicherung, damit ich die vorgegebe place-Funktion mit den 
     // geforderten Parametern umsetzen kann und eine Überprüfung der Werte vornehmen kann
     const [posXTMP, setPosXTMP] = useState(-1);
     const [posYTMP, setPosYTMP] = useState(-1);
