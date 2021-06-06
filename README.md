@@ -9,7 +9,7 @@ Node.js
 
 ## Clone project and run
 
-Run this commands in the project folder "robot-challenge".\
+Run this commands in the project folder "robot-challenge".
 
 ### `npm install`
 
@@ -25,5 +25,5 @@ You will also see any lint errors in the console.
 
 ## Layout / Styling
 
-React Bootstrap (https://react-bootstrap.github.io/) .\
+React Bootstrap (https://react-bootstrap.github.io/) \
 Font Awesome free (https://fontawesome.com/)
