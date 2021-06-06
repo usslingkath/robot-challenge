@@ -9,7 +9,7 @@ Node.js
 
 ## Clone project and run
 
-Run this commands in the project folder "robot-challenge".
+Run these commands in the project folder "robot-challenge".
 
 ### `npm install`
 
