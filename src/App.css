@@ -1,0 +1,85 @@
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.table {
+  table-layout: fixed !important;
+  width: 600px !important;
+}
+
+.boxElem {
+  width: 120px !important;
+  height: 120px !important;
+}
+
+.table td {
+  padding: 5px !important;
+}
+
+.grid {
+  border-style: solid;
+  border-width: 2px;
+}
+
+.myRobot {
+  font-size: xx-large;
+}
+
+.dirArrow {
+  font-size: xx-large;
+}
+
+.myCol {
+  padding: 0 5px 0 5px !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.dirArrowSpec {
+  vertical-align: middle !important;
+}
+
+.rowTitle {
+  margin: 2em 0 2em 0;
+}
+
+.formInputPos {
+  width: 80px;
+  margin: 1em 1em 1em 0 !important;
+}
+
+.formInputDir {
+  margin-bottom: 0 !important;
+}
+
+.formInputDirCol {
+  margin: 0 1em 1em 0 !important;
+}
+
+.formInputDirLabel {
+  margin-bottom: 0 !important;
+}
+
+.marginBottom0 {
+  margin-bottom: 0 !important;
+}
+
+.padding0 {
+  padding: 0 !important;
+}
+
+.buttonRobot {
+  width: 100px;
+  margin: 0 1em 0 0 !important;
+}
+
+#reportField {
+  width: 250px;
+}
+
+.formMaxWidth {
+  max-width: 380px;
+}
